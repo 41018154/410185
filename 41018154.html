@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第2個專案網站</title>
+  <style>
+    #info {
+      text-align: center;
+    }
+
+    #profile-pic {
+      border: 2px solid black;
+      border-radius: 50%;
+      max-width: 200px;
+      margin: 20px;
+    }
+
+    #buttons {
+      text-align: center;
+      margin: 20px;
+    }
+
+    a {
+      display: block;
+      margin: 10px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // 初始設定
+      $("#student-id").css({"font-size": "16px", "color": "black"});
+      $("#student-name").css({"font-size": "16px", "color": "black"});
+      
+      // 功能2: 調整字體和顏色
+      $("#btn1").click(function(){
+        $("#student-id, #student-name").css({
+          "font-size": "35px",
+          "color": "blue"
+        });
+      });
+
+      // 功能3: 調整大頭照樣式
+      $("#btn2").click(function(){
+        $("#profile-pic").css({
+          "border": "5px solid red",
+          "border-radius": "50%"
+        });
+      });
+
+      // 功能4: 換圖
+      $("#btn3").click(function(){
+        $("#profile-pic").attr("src", "url_to_your_lifestyle_photo.jpg");
+      });
+
+      // 功能5: 淡入淡出
+      $("#btn4").click(function(){
+        $("#profile-pic").fadeToggle("slow");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="info">
+    <p id="student-id">學號:41018154</p>
+    <p id="student-name">姓名: 許仁澤 </p>
+    <img id="profile-pic" src="url_to_your_selfie.jpg" alt="Your Selfie">
+  </div>
+
+  <div id="buttons">
+    <button id="btn1">調整字體和顏色</button>
+    <button id="btn2">調整大頭照樣式</button>
+    <button id="btn3">換圖</button>
+    <button id="btn4">淡入淡出</button>
+  </div>
+
+  <div>
+    <a href="link_to_answer_html.html" target="_blank">超連結1: 顯示本題答案的原始 html 檔</a>
+    <a href="link_to_answer_js.js" target="_blank">超連結2: 顯示本題答案的原始 js 檔</a>
+  </div>
+</body>
+</html>
